@@ -6,10 +6,12 @@ pip install pattern3
 
 ## Examples
 
-### TESTING NOUN
+| Word              | Tag      | Type      | Word Forms                               |
+| -------------     |:--------:| ---------:| ----------------------------------------:|
+| Company           | NN       |   Noun    |Company, Companys                         |
+| Counterparties    | NNS      |   Noun    |Counterparties, Counterparty              |
+| Concerned         | JJ       | Adjective |Concerned, more Concerned, most_concerned |
+| been              | VBN      |   Verb    |been, is, was, be                         |
+| write             | VB       |   Verb    |write, writes, wrote, write               |
 
-'Company' | Tag:  u'NN'
-['Company', u'Companys']
-'Counterparties' | u'NNS'
-['Counterparties', u'Counterparty']
 

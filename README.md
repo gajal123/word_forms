@@ -1,12 +1,12 @@
 # word_forms
 Gets all relative forms of a word using pattern
 
-##Requirement
+## Requirement
 pip install pattern3
 
-##Examples
+## Examples
 
-###TESTING NOUN
+### TESTING NOUN
 
 'Company' | Tag:  u'NN'
 ['Company', u'Companys']

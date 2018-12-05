@@ -5,6 +5,19 @@ import spacy
 
 nlp = spacy.load('en_core_web_sm')
 
+word_actions = {
+	'NN': [pluralize],
+	'NNP' : [pluralize],
+	'NNS': [singularize],
+	'NNPS': [singularize],
+	'JJ': [comparative, superlative],
+	'JJR': [superlative],
+	'JJS': [comparative],
+	'RB': [comparative, superlative],
+	'RBR': [superlative],
+	'RBS': [comparative]
+}
+
 def get_word_forms(word):
 	return word
 

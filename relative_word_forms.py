@@ -38,7 +38,20 @@ word_actions = {
 }
 
 def get_word_forms(word):
-	return word
+	word_forms = [word]
+	doc = nlp(unicode(word))
+	if len(doc) > 1:
+		return [word]
+	word_tag = doc[0].tag_
+	if word_tag is None:
+		return word_forms
+	if word_actions.get(word_tag):
+		for action_name in word_actions.get(word_tag):
+			word_form = action_name(word)
+			if word_form is not None:
+				word_forms.append(word_form)
+	print(word, ': ', word_forms)
+	return word_forms
 
 def get_all_word_forms(word_list = []):
 	all_word_forms = []

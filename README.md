@@ -1,12 +1,14 @@
 # word_forms
-Gets all relative forms of a word using pattern
+Gets all/relative forms of a word using pattern and spacy
 
 ## Requirement
 pip install pattern3
 
 ## Examples
 
-| Word              | Tag      | Type      | Word Forms                               |
+geting relative word forms
+
+| Word              | Tag      | Type      | Relative Word Forms                      |
 | -------------     |:--------:| ---------:| ----------------------------------------:|
 | Company           | NN       |   Noun    |Company, Companys                         |
 | Counterparties    | NNS      |   Noun    |Counterparties, Counterparty              |

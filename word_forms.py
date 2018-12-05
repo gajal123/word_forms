@@ -5,6 +5,19 @@ import spacy
 
 nlp = spacy.load('en_core_web_sm')
 
+
+def verb_present_conjugation(word):
+	return conjugate(word, tense=PRESENT)
+
+def verb_past_conjugation(word):
+	return conjugate(word, tense=PAST)
+
+def verb_future_conjugation(word):
+	return conjugate(word, tense=FUTURE)
+
+def verb_infinitive_conjugation(word):
+	return conjugate(word, tense=INFINITIVE)
+
 word_actions = {
 	'NN': [pluralize],
 	'NNP' : [pluralize],
@@ -15,7 +28,13 @@ word_actions = {
 	'JJS': [comparative],
 	'RB': [comparative, superlative],
 	'RBR': [superlative],
-	'RBS': [comparative]
+	'RBS': [comparative],
+	'VB': [verb_present_conjugation, verb_past_conjugation, verb_future_conjugation, verb_infinitive_conjugation],
+	'VBD': [verb_present_conjugation, verb_future_conjugation, verb_infinitive_conjugation],
+	'VBG': [verb_present_conjugation, verb_past_conjugation, verb_future_conjugation, verb_infinitive_conjugation],
+	'VBN': [verb_present_conjugation, verb_past_conjugation, verb_future_conjugation, verb_infinitive_conjugation],
+	'VBP': [verb_present_conjugation, verb_past_conjugation, verb_future_conjugation, verb_infinitive_conjugation],
+	'VBZ': [verb_present_conjugation, verb_past_conjugation, verb_future_conjugation, verb_infinitive_conjugation]
 }
 
 def get_word_forms(word):
